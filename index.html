@@ -1,0 +1,431 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2018 ACM Mid-Atlantic Regional Programming Contest</title>
+  <style type="text/css" media="screen">
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+button, [type='button'], [type='reset'], [type='submit'] {
+  appearance: none;
+  background-color: #1565c0;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover {
+    background-color: #11519a;
+    color: #fff; }
+  button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus {
+    outline: 3px solid rgba(21, 101, 192, 0.6);
+    outline-offset: 2px; }
+  button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover {
+      background-color: #1565c0; }
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em; }
+
+input,
+select,
+textarea {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+[type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%; }
+  [type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover {
+    border-color: #b1b1b1; }
+  [type='color']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='email']:focus, [type='month']:focus, [type='number']:focus, [type='password']:focus, [type='search']:focus, [type='tel']:focus, [type='text']:focus, [type='time']:focus, [type='url']:focus, [type='week']:focus, input:not([type]):focus, textarea:focus {
+    border-color: #1565c0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(21, 101, 192, 0.7);
+    outline: none; }
+  [type='color']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='email']:disabled, [type='month']:disabled, [type='number']:disabled, [type='password']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='text']:disabled, [type='time']:disabled, [type='url']:disabled, [type='week']:disabled, input:not([type]):disabled, textarea:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed; }
+    [type='color']:disabled:hover, [type='date']:disabled:hover, [type='datetime']:disabled:hover, [type='datetime-local']:disabled:hover, [type='email']:disabled:hover, [type='month']:disabled:hover, [type='number']:disabled:hover, [type='password']:disabled:hover, [type='search']:disabled:hover, [type='tel']:disabled:hover, [type='text']:disabled:hover, [type='time']:disabled:hover, [type='url']:disabled:hover, [type='week']:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
+      border: 1px solid #ddd; }
+  [type='color']::placeholder, [type='date']::placeholder, [type='datetime']::placeholder, [type='datetime-local']::placeholder, [type='email']::placeholder, [type='month']::placeholder, [type='number']::placeholder, [type='password']::placeholder, [type='search']::placeholder, [type='tel']::placeholder, [type='text']::placeholder, [type='time']::placeholder, [type='url']::placeholder, [type='week']::placeholder, input:not([type])::placeholder, textarea::placeholder {
+    color: #858585; }
+
+textarea {
+  resize: vertical; }
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 0.75em;
+  width: 100%; }
+
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[type="file"]:focus,
+select:focus {
+  outline: 3px solid rgba(21, 101, 192, 0.6);
+  outline-offset: 2px; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  margin: 0; }
+
+/*ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}*/
+dl {
+  margin: 0; }
+
+dt {
+  font-weight: 600;
+  margin: 0; }
+
+dd {
+  margin: 0; }
+
+figure {
+  margin: 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+table {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%; }
+
+thead {
+  line-height: 1.2;
+  vertical-align: bottom; }
+
+tbody {
+  vertical-align: top; }
+
+tr {
+  border-bottom: 1px solid #ddd; }
+
+th {
+  font-weight: 600; }
+
+th,
+td {
+  padding: 0.75em 0.75em 0.75em 0; }
+
+html {
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.25em; }
+
+p {
+  margin: 0 0 0.75em;
+  text-align: justify; }
+
+a {
+  color: #1565c0;
+  text-decoration-skip: ink;
+  transition: color 150ms ease; }
+  a:hover {
+    color: #104c90; }
+  a:focus {
+    outline: 3px solid rgba(21, 101, 192, 0.6);
+    outline-offset: 2px; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+#container {
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+
+header {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 1em; }
+
+#markdown-toc {
+  float: right;
+  border: 1px solid black;
+  padding: 1em;
+  margin-left: 2em;
+  list-style-type: none;
+  background-color: #DDD; }
+
+.clearer {
+  clear: both; }
+
+.footnotes {
+  border-top: 1px solid gray; }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      2018 ACM Mid-Atlantic Regional Programming Contest
+    </header>
+    <article>
+      <ul id="markdown-toc">
+  <li><a href="#room-assignments" id="markdown-toc-room-assignments">Room Assignments</a></li>
+  <li><a href="#schedule" id="markdown-toc-schedule">Schedule</a></li>
+  <li><a href="#directions" id="markdown-toc-directions">Directions</a></li>
+  <li><a href="#contest-environment" id="markdown-toc-contest-environment">Contest Environment</a></li>
+  <li><a href="#programming-languages" id="markdown-toc-programming-languages">Programming Languages</a></li>
+  <li><a href="#materials" id="markdown-toc-materials">Materials</a></li>
+  <li><a href="#rules" id="markdown-toc-rules">Rules</a></li>
+  <li><a href="#practice-questions" id="markdown-toc-practice-questions">Practice Questions</a></li>
+  <li><a href="#for-more-information" id="markdown-toc-for-more-information">For more information</a></li>
+</ul>
+
+<p>The 2018 edition of the
+<a href="http://icpc.baylor.edu/icpc/">ACM International Collegiate Programming Contest</a>
+for the Mid-Atlantic Region will be held on Saturday, November 11th from 12-5
+PM<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> at Johns Hopkins University on the Homewood campus. The exact location
+will be Hackerman Hall Room B17 (in the basement); teams should come to this
+room for registration. The contest itself will take place in the Undergraduate
+Computer Science Labs.</p>
+
+<p>The <a href="https://mausa18.kattis.com/standings">Contest scoreboard will be available through Kattis</a>.</p>
+
+<h1 class="clearer" id="room-assignments">Room Assignments</h1>
+<p>When arriving for the contest, please report to B17 in Hackerman Hall. There
+will be volunteers on hand to direct you to the right place once you get to the
+building.</p>
+
+<h1 id="schedule">Schedule</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9:00-9:45</td>
+      <td>Registration, Give out Certificates, Badges, T-Shirts, etc., Optional Breakfast</td>
+    </tr>
+    <tr>
+      <td>9:45-10:00</td>
+      <td>Welcome, introduction, rules, orientation</td>
+    </tr>
+    <tr>
+      <td>10:00-11:00</td>
+      <td>Practice Problem</td>
+    </tr>
+    <tr>
+      <td>11:00-12:00</td>
+      <td>Lunch, review of contest rules</td>
+    </tr>
+    <tr>
+      <td>12:00-17:00</td>
+      <td>Competition</td>
+    </tr>
+    <tr>
+      <td>17:00-18:00</td>
+      <td>Dinner</td>
+    </tr>
+    <tr>
+      <td>18:00-18:30</td>
+      <td>Announce Results, Present Awards</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="directions">Directions</h1>
+<p>Google Maps: <a href="https://www.google.com/maps/place/South+Garage/@39.3259794,-76.6222468,20z/data=!4m13!1m7!3m6!1s0x89c804def3a4f9f9:0xd1f3056566e1e289!2sMason+Hall,+3101+Wyman+Park+Dr,+Baltimore,+MD+21218!3b1!8m2!3d39.3258897!4d-76.6215284!3m4!1s0x0:0x2e56e27498083f59!8m2!3d39.3260131!4d-76.6220453?hl=en%22">Go to the South Garage: 3101 Wyman Park Drive</a></p>
+
+<p>Campus Map: Contest registration will be held in Hackerman Hall. On the
+<a href="https://www.jhu.edu/assets/uploads/2014/10/homewood_campus_map.pdf">campus map</a>,
+Hackerman is Building 29. We suggest you park in the parking structure beneath
+the Decker Quad.</p>
+
+<h2 class="no_toc" id="from-i-95-southbound-or-from-i-695-the-baltimore-beltway">From I-95 (southbound) or from I-695 (the Baltimore Beltway)</h2>
+<p>Take the beltway toward Towson to exit 25. Take Charles Street south for about
+7 miles (when Charles Street splits a block after Loyola College and Cold
+Spring Lane, take the right fork). As you approach the university and cross
+University Parkway, continue southbound but be sure to jog right onto the
+service road. After you pass the university on the right, turn right onto Art
+Museum Drive. Just after the Baltimore Museum of Art, bear right at the traffic
+island onto Wyman Park Drive. Take a right immediately after the university
+gates into the parking structure.</p>
+
+<h2 class="no_toc" id="from-i-95-northbound">From I-95 (northbound)</h2>
+<p>Take exit 53 onto I-395 north toward downtown Baltimore, then take the exit to
+Martin Luther King Jr. Boulevard and follow the directions from Martin Luther
+King Junior Boulevard below.</p>
+
+<h2 class="no_toc" id="from-maryland-295-the-baltimore-washington-parkway">From Maryland 295 (the Baltimore-Washington Parkway)</h2>
+<p>Entering Baltimore, the parkway becomes Russell Street. Stay on Russell Street
+until (with the new Baltimore Ravens stadium to your right and Oriole Park at
+Camden Yards looming before you) you reach the right-hand exit marked Martin
+Luther King Jr. Boulevard (look carefully for this; the signs are small). This
+exit will put you very briefly on a service road parallel to Russell Street.
+Stay to the left and take the ramp marked Martin Luther King Jr. Boulevard.
+Follow the directions (below) from Martin Luther King Jr. Boulevard.</p>
+
+<h2 class="no_toc" id="from-martin-luther-king-jr-boulevard">From Martin Luther King Jr. Boulevard</h2>
+<p>Take King Boulevard north until it ends at Howard Street (remain in one of the
+middle lanes of King Boulevard to avoid a premature forced right or left turn).
+Turn left at Howard Street and proceed about 2 miles. One block past 29th
+Street, turn left at the traffic island (just before the Baltimore Museum of
+Art) onto Wyman Park Drive. Take a right immediately after the university gates
+into the parking structure.</p>
+
+<h2 class="no_toc" id="from-the-jones-falls-expressway-i-83-southbound">From the Jones Falls Expressway (I-83) southbound</h2>
+<p>Take the 28th Street exit to 28th Street east. Turn left on Howard Street. One
+block past 29th Street, turn left at the traffic island (just before the
+Baltimore Museum of Art) onto Wyman Park Drive. Take a right immediately after
+the university gates into the parking structure.</p>
+
+<h1 id="contest-environment">Contest Environment</h1>
+<p>You will be given access to a Linux workstation. Free printing will be
+available. You will <strong>not</strong> be allowed to bring your own hardware (including
+keyboards and mice).</p>
+
+<p>The following software will be installed on the workstation:</p>
+
+<ul>
+  <li>LXDE desktop environment</li>
+  <li>vim</li>
+  <li>gvim</li>
+  <li>emacs</li>
+  <li>gedit</li>
+  <li>geany</li>
+  <li>kate</li>
+  <li>Eclipse 4.7 (Oxygen) with Java, CDT, and PyDev 5.8 installed</li>
+  <li>IntelliJ IDEA Community Edition 2017.2</li>
+  <li>Pycharm Community Edition 2017.2</li>
+  <li>Code::Blocks 13.12</li>
+  <li>OpenJDK version 1.8.0_181</li>
+  <li>gcc 5.4.0</li>
+  <li>g++ 5.4.0</li>
+  <li>Python 2.7.10 (PyPy 5.1.2)</li>
+  <li>CPython 3.5.2</li>
+</ul>
+
+<h1 id="programming-languages">Programming Languages</h1>
+<p>Contestants may write submissions in C, C++, Python, or Java. Programming
+language documentation will be available at your workstation.</p>
+
+<h1 id="materials">Materials</h1>
+<p>Contestants are allowed to bring any printed material they wish, including any
+books and printed code samples. Note that this specifically excludes any and
+all electronic formats or readers.</p>
+
+<h1 id="rules">Rules</h1>
+<p>For all rules related to scoring or other concerns, please see the
+<a href="http://icpc.baylor.edu/regionals/rules">Official Regional Contest Rules</a>.</p>
+
+<h1 id="practice-questions">Practice Questions</h1>
+<p>Radford has made available
+<a href="http://www.radford.edu/acm/midatl/problem-set-links.html">questions from previous years</a>.</p>
+
+<h1 id="for-more-information">For more information</h1>
+<p>Look at the
+<a href="http://www.radford.edu/acm/midatl/">Mid-Atlantic regional competition website</a>
+or email <a href="mailto:jhuicpc@googlegroups.com">jhuicpc@googlegroups.com</a> with any
+questions.</p>
+
+<p>contestants must report to Hackerman Hall earlier in the day. See the schedule
+for more details.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Even though the competition itself will be running only from 12 until 5, <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </article>
+  </div>
+</body>
+</html>
