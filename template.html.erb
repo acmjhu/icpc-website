@@ -1,0 +1,33 @@
+<% YEAR = 2018 %>
+
+<%
+  require 'sass'
+  require 'bourbon'
+  
+  module Sass::Script::Functions
+    def gsub(string, old, replacement)
+      Sass::Script::String.new(string.value.gsub(old.value, replacement.value))
+    end
+  end
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= YEAR %> ACM Mid-Atlantic Regional Programming Contest</title>
+  <style type="text/css" media="screen">
+    <%= Sass::Engine.for_file('scss/main.scss', {}).render %>
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <%= YEAR %> ACM Mid-Atlantic Regional Programming Contest
+    </header>
+    <article>
+      <%= @body %>
+    </article>
+  </div>
+</body>
+</html>
