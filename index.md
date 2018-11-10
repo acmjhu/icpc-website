@@ -22,10 +22,10 @@ building.
 
 |     Time    |                                     Activity                                    |
 |-------------|---------------------------------------------------------------------------------|
-| 9:00-9:45   | Registration, Give out Certificates, Badges, T-Shirts, etc., Optional Breakfast |
-| 9:45-10:00  | Welcome, introduction, rules, orientation                                       |
+| 9:00-9:30   | Registration, Give out Certificates, Badges, T-Shirts, etc., Optional Breakfast |
+| 9:30-10:00  | Welcome, introduction, rules, orientation                                       |
 | 10:00-11:00 | Practice Problem                                                                |
-| 11:00-12:00 | Lunch, review of contest rules                                                  |
+| 11:00-11:45 | Lunch, review of contest rules                                                  |
 | 12:00-17:00 | Competition                                                                     |
 | 17:00-18:00 | Dinner                                                                          |
 | 18:00-18:30 | Announce Results, Present Awards                                                |
