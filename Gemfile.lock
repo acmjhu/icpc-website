@@ -9,7 +9,7 @@ GEM
       sass (~> 3.4)
       thor (~> 0.19)
     ffi (1.9.25)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
